@@ -23,16 +23,16 @@ ENV PDNS_API_URL ""
 # Install required packages
 ##############################
 RUN apt-get update
-RUN apt-get install -y git python-pip
+RUN apt-get install -y git python3-pip
 
 # Install Certbot
 #################################
-RUN pip2 install -U certbot
+RUN pip3 install -U certbot
 
 
 # Install Certbot PDNS plugin
 #################################
-RUN pip2 install certbot-pdns
+RUN pip3 install certbot-pdns
 
 #install from sources
 #RUN cd /opt
